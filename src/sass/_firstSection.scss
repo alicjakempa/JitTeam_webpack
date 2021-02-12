@@ -1,0 +1,25 @@
+
+.firstSection {
+    height: 100vh;
+    background-image: url(../images/kanapa.jpg);
+    @include standardBgPosition();
+    padding-top: 25vh;
+    padding-left: 5vw;
+
+    @media all and (min-width: 700px) {
+        padding-top: 25vh;
+        padding-left: 10vw;
+    }
+    
+    @media all and (min-width: 960px) {
+        padding-left: 20vw;
+    }
+    button {
+        @include primaryButton();
+        margin: 2rem auto;
+
+        &:hover {
+            background-color: rgba(0,0,0,1);
+        }
+    }
+}

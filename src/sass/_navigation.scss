@@ -1,0 +1,96 @@
+nav {
+    position: fixed;
+    background: $primaryColor;
+    padding: 0 15px;
+    width: 100vw;
+    z-index: 100;
+
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+        width: 90vw;
+        margin: auto;
+
+        li a {
+            display: block;
+            padding: 15px 5px;
+            color: $secondaryColor;
+            text-decoration: none;
+
+            &:hover {
+                color: $logoColor;
+            }
+           }
+
+        .logo a {
+            font-size: 20px;
+            color: $logoColor;
+        }
+    }
+    
+    .item {
+        padding: 10px;
+        order: 2;
+        width: 100%;
+        text-align: center;
+        display: none;
+    }
+    .active .item {
+        display: block;
+    }
+
+    .toggle {
+        order: 1;
+        font-size: $toggleSize;
+        color: $secondaryColor;
+    }
+
+    /* Tablet menu */
+    @media all and (min-width: 700px) {
+        .menu {
+            justify-content: center;
+        }
+        .logo {
+            flex: 1;
+        }
+        .item.button {
+            width: auto;
+            order: 1;
+            display: block;
+        }
+        .toggle {
+            flex: 1;
+            text-align: right;
+            margin-top: 0;
+        }
+    }
+    /* Desktop menu */
+    @media all and (min-width: 960px) {
+        .menu {
+            align-items: flex-start;     
+            flex-wrap: nowrap;
+        }
+        .logo {
+            order: 0;
+            margin: auto;
+        }
+        .item {
+            order: 1;
+            position: relative;
+            display: block; 
+            width: auto;
+        }
+        .button {
+            order: 2;
+        }
+ 
+        .toggle {
+            display: none;
+        }
+
+    }
+    
+}

@@ -1,0 +1,64 @@
+.secondSection {
+    
+    background-color: $primaryColor;
+    color: $secondaryColor;
+    @include gridTemplateCol();
+
+    @media all and (min-width: 700px) {
+        height:100%;
+        @include gridTemplateRow();
+    } 
+    .leftPhoto {
+        grid-area: top;
+        justify-self: center;
+
+        img {
+            @include imageOnGrid();
+            padding: 10vh 5vw;
+
+        }
+        @media all and (min-width: 700px) {
+            grid-area: left;
+            img {
+                height: 100vh;
+            }
+        }
+    }
+    .descriptionSec2 {
+        grid-area: bottom;
+        @include textOnGrid();
+        min-height: 50vh;
+        padding-left: 10vw;
+    
+        h2 {
+            max-width: 95%; 
+            @media all and (min-width: 700px) {
+                max-width: 80%; 
+            } 
+        }
+        p {
+            margin-top: 2rem;
+            max-width: 95%;
+            @media all and (min-width: 700px) {
+                max-width: 80%; 
+            } 
+        }
+        button {
+            @include primaryButton();
+            margin: 2rem auto 3rem 0;
+            background-color: $logoColor;
+
+            &:hover {
+                background-color: rgba($secondaryColor, .2);
+            }
+        }
+
+        @media all and (min-width: 700px) {
+            grid-area: right;
+            padding-left: 0vw;
+            padding-right: 10vw;
+            height: 100vh;
+        }
+    
+    }
+}

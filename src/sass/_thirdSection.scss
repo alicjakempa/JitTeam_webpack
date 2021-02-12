@@ -1,0 +1,56 @@
+
+.thirdSection {
+    background-color: $secondaryColor;
+    color: $primaryColor;
+    @include gridTemplateCol();
+
+    @media all and (min-width: 700px) {
+        height: 100%;
+        @include gridTemplateRow();
+    } 
+}
+.rightPhoto {
+    grid-area: bottom;
+    justify-self: center;
+   
+    img {
+        @include imageOnGrid();
+        padding: 10vh 5vw;
+    }
+    @media all and (min-width: 700px) {
+        grid-area: right;
+        img {
+            height: 100vh;
+        }
+    }
+}
+.descriptionSec3 {
+    grid-area: top;
+    @include textOnGrid();
+    padding-left: 10vw;
+    padding-top: 3vh;
+    min-height: 50vh;
+
+    h2 {
+        max-width: 95%; 
+        @media all and (min-width: 700px) {
+            max-width: 100%; 
+        } 
+    }
+    p {
+        margin-top: 2rem;
+        max-width: 95%;
+        @media all and (min-width: 700px) {
+            max-width: 100%; 
+        } 
+    }
+
+    @media all and (min-width: 700px) {
+        grid-area: left;
+        padding-left: 15vw;
+        padding-right: 0vw;
+        height: 100vh;
+        padding-top: 0vh;
+    }
+
+}
