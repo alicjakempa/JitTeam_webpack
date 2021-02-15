@@ -38,7 +38,7 @@ module.exports = {
                 use: [
                     {
                         loader: MiniCssExtractPlugin.loader,
-                        //tu dodałaś !!!!!!!!
+                        //tu dodałaś kod z stack overflow!!!!!!!!
                         options: {
                             publicPath: ""
                         }
